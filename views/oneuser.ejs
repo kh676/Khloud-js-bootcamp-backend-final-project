@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-image: linear-gradient(-225deg, #e7f0ee 0%, #f5edf3 100%);
+        background-image: linear-gradient(to top, #efffff 0%, #f6e7f2 100%);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+
+        font-family: "Vibur", cursive;
+        /*   the main font */
+        font-family: "Abel", sans-serif;
+        opacity: 0.95;
+        /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
+      }
+      header {
+        margin: px;
+        border: 70px solid white;
+
+        color: slategray;
+        width: 1500px;
+        height: 100px;
+      }
+      footer {
+        margin: px;
+        border: 100px solid white;
+        background-color: slategray;
+        color: slategray;
+        width: 1500px;
+        height: 100px;
+      }
+      hr.style-six {
+        border: 0;
+        height: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      body {
+        height: 100%;
+        width: 100%;
+        background-color: #eceef9;
+      }
+
+      footer {
+        color: #333;
+        background-color: #e6f0ff;
+        position: relative;
+        bottom: 0;
+        font-size: 1.2rem;
+      }
+
+      .row {
+        display: flex;
+        padding: 1rem;
+      }
+
+      .column {
+        width: calc(100% / 3);
+        padding: 0 0.9375rem;
+      }
+
+      h4 {
+        margin-bottom: 0.9375rem;
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.3rem;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      ul li {
+        margin-bottom: 0.625rem;
+      }
+
+      ul li a {
+        color: #333;
+        font-size: 1rem;
+      }
+
+      ul li i {
+        color: #6faaff;
+      }
+
+      ul li a:hover {
+        color: #6faaff;
+      }
+
+      ul.social-icons {
+        display: flex;
+        column-gap: 0.625rem;
+      }
+
+      .social-icons i {
+        color: white;
+      }
+
+      ul.social-icons li {
+        margin-bottom: 0rem;
+      }
+
+      ul.social-icons li a {
+        display: grid;
+        place-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+        background-color: #6faaff;
+      }
+
+      ul.social-icons li:hover a {
+        background-color: #6fdeff;
+      }
+
+      .copyright {
+        text-align: center;
+        color: #fff;
+        background-color: #6faaff;
+        padding: 0.6rem 0;
+      }
+
+      /* Responsive adjustments */
+
+      @media screen and (max-width: 768px) {
+        .column {
+          margin: 0.4rem 0;
+          width: 100%;
+          padding: 0;
+        }
+
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        h4 {
+          font-size: 1.3125rem;
+        }
+
+        p {
+          font-size: 0.9375rem;
+        }
+
+        ul li a {
+          font-size: 0.9375rem;
+        }
+
+        ul.social-icons li a {
+          width: 1.875rem;
+          height: 1.875rem;
+        }
+      }
+      section,
+      footer {
+        text-align: center;
+        background: #fff;
+        padding: 20px;
+        margin: 20px 0;
+        font-weight: 100;
+      }
+
+      form {
+        padding: 20px;
+        margin: 20px 0;
+      }
+
+      footer {
+        border-top: 1px solid #e2e2e2;
+      }
+
+      .flex-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: -webkit-box;
+        display: flex;
+      }
+
+      .flex-nav li {
+        -webkit-box-flex: 3;
+        flex: 3;
+      }
+
+      .flex-nav li a {
+        color: #8b8b8b;
+      }
+
+      .flex-nav li a:hover,
+      .flex-nav li a:focus {
+        color: #222;
+      }
+
+      .flex-nav .social {
+        -webkit-box-flex: 1;
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <h1><a href="#" title="Katosnap"></a></h1>
+      <nav class="flex-nav">
+        <ul>
+          <li><a href="#" title="Home">Home</a></li>
+          <li><a href="#" title="About">About</a></li>
+          <li><a href="#" title="Work">Work</a></li>
+          <li><a href="#" title="Services">Services</a></li>
+          <li><a href="#" title="Contact">Contact</a></li>
+          <li class="social">
+            <a href="https://twitter.com/kato_katherine" title="Twitter"
+              ><i class="fa fa-twitter"></i
+            ></a>
+          </li>
+          <li class="social">
+            <a href="https://dribbble.com/kathykato" title="Dribbble"
+              ><i class="fa fa-dribbble"></i
+            ></a>
+          </li>
+          <li class="social">
+            <a href="https://github.com/kathykato" title="GitHub"
+              ><i class="fa fa-github"></i
+            ></a>
+          </li>
+          <li class="social">
+            <a href="https://www.instagram.com/kathy.kato" title="Instagram"
+              ><i class="fa fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <br />
+    <div class="card border-light mb-3" style="width: 50rem">
+      <div class="container">
+        <br /><br />
+
+        <h1
+          style="font-family: Georgia, serif; color: dimgray; font-size: 30px"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="55"
+            height="55"
+            fill="currentColor"
+            class="bi bi-person-circle"
+            viewBox="0 1 20 18"
+          >
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path
+              fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+            />
+          </svg>
+          <%=i.name %>
+        </h1>
+
+        <br />
+        <p style="color: lightslategrey">
+          &nbsp;&nbsp;&nbsp;&dotminus; to view or create courses
+        </p>
+        &nbsp;&nbsp;
+        <div class="text-right">
+          <a
+            href="/createcourse/<%=i._id%>"
+            class="btn btn-primary"
+            style="
+              color: #a4c6ee;
+              border-color: #a4c6ee;
+              background-color: white;
+            "
+            >create course</a
+          >
+          &nbsp; &nbsp;
+          <a
+            href="/course/<%=i._id%>"
+            class="btn btn-primary"
+            style="
+              color: #d2a2d2;
+              border-color: #d2a2d2;
+              background-color: white;
+            "
+            >courses</a
+          >
+          &nbsp; &nbsp; &nbsp;
+          <a
+            href="/update/<%=i._id%>"
+            class="btn btn-primary"
+            style="
+              background-color: white;
+              color: lightslategrey;
+              border-color: lightslategrey;
+            "
+            >Edit</a
+          >
+        </div>
+
+        <br /><br />
+      </div>
+    </div>
+  </body>
+  <br /><br />
+  <br /><br />
+  <footer>
+    <div class="row">
+      <div class="column">
+        <h4>About Us</h4>
+
+        <p>
+          An educational academy that develops students in technical fields and
+          prepares them for the job market
+        </p>
+      </div>
+
+      <div class="column">
+        <h4>Quick Links</h4>
+
+        <ul>
+          <li>
+            <a href="#"><i class="fa fa-angle-right"></i> Subscription</a>
+          </li>
+
+          <li>
+            <a href="#"><i class="fa fa-angle-right"></i> Contact us</a>
+          </li>
+
+          <li>
+            <a href="#"><i class="fa fa-angle-right"></i> Bug report</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="column">
+        <h4>Connect with Us</h4>
+
+        <li class="social">
+          <a href="https://twitter.com/kato_katherine" title="Twitter"
+            ><i class="fa fa-twitter"></i
+          ></a>
+        </li>
+        <li class="social">
+          <a href="https://dribbble.com/kathykato" title="Dribbble"
+            ><i class="fa fa-dribbble"></i
+          ></a>
+        </li>
+        <li class="social">
+          <a href="https://github.com/kathykato" title="GitHub"
+            ><i class="fa fa-github"></i
+          ></a>
+        </li>
+        <li class="social">
+          <a href="https://www.instagram.com/kathy.kato" title="Instagram"
+            ><i class="fa fa-instagram"></i
+          ></a>
+        </li>
+      </div>
+    </div>
+  </footer>
+</html>
